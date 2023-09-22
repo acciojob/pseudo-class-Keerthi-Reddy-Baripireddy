@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset some default browser styles */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the container */
+        #container {
+            margin: 20px;
+            position: relative;
+            padding: 20px; /* Add padding to create space for the special text */
+        }
+
+        /* Style the pseudo-element before the container */
+        #container::before {
+            content: "Special Text Before";
+            display: block;
+            color: #f00;
+            font-size: 20px;
+            position: absolute;
+            left: 0; /* Adjust this value for spacing */
+            top: -30px; /* Adjust this value to control vertical positioning */
+        }
+
+        /* Style the pseudo-element after the container */
+        #container::after {
+            content: "Special Text After";
+            display: block;
+            color: #f00;
+            font-size: 20px;
+            position: absolute;
+            left: 0; /* Adjust this value for spacing */
+            bottom: -30px; /* Adjust this value to control vertical positioning */
+        }
+    </style>
+    <title>Special Text Before and After</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <div id="container">
+        <!-- Main content of the container goes here -->
+        This is the main content of the container.
+    </div>
 </body>
-
 </html>
